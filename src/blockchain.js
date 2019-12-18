@@ -196,7 +196,6 @@ class Blockchain {
     return new Promise((resolve, reject) => {
       return Promise.all(self.chain.map(b => b.getBData()))
         .then(jsonArr => {
-          debugger;
           return jsonArr
             .filter(json => {
               return (
